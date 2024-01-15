@@ -19,9 +19,9 @@ class BaseClass:
             time.sleep(2)
 
     def wait_until_element_is_clickable(self, locator_type, locator):
-        wait = WebDriverWait(self.driver, 10,2,ignored_exceptions='ElementClickInterceptedException')
+        wait = WebDriverWait(self.driver, 10)
         return wait.until(EC.element_to_be_clickable((locator_type, locator)))
 
     def wait_until_presence_of_elements(self, locator_type, locator):
-        wait = WebDriverWait(self.driver, 10,2,ignored_exceptions='ElementClickInterceptedException')
+        wait = WebDriverWait(self.driver, 10)
         return wait.until(EC.presence_of_all_elements_located((locator_type, locator)))

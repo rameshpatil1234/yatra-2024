@@ -57,12 +57,12 @@ class LaunchPage(BaseClass):
     def get_dept_date_field(self):
         return self.wait_until_element_is_clickable(*self.dept_date_field)
 
-    def get_all_dates_list(self):
-        return self.wait_until_presence_of_elements(*self.all_dates_field)
+    # def get_all_dates_list(self):
+    #     return self.wait_until_presence_of_elements(*self.all_dates_field)
 
     def dept_date(self, deptdate):
         self.get_dept_date_field().click()
-        all_dates = self.get_all_dates_list()
+        all_dates = self.wait_until_element_is_clickable(*self.all_dates_field).find_elements(*self.all_dates_field)
         for date in all_dates:
             if date.get_attribute("data-date") == deptdate:
                 date.click()
