@@ -253,9 +253,45 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 15-Jan-2024 at 19:46:32 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
+    <p>Report generated on 15-Jan-2024 at 19:52:50 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
+      <tr>
+        <td>BUILD_ID</td>
+        <td>9</td></tr>
+      <tr>
+        <td>BUILD_NUMBER</td>
+        <td>9</td></tr>
+      <tr>
+        <td>BUILD_TAG</td>
+        <td>jenkins-yatra-2024-9</td></tr>
+      <tr>
+        <td>BUILD_URL</td>
+        <td><a href="http://localhost:9090/job/yatra-2024/9/" target="_blank">http://localhost:9090/job/yatra-2024/9/</a></td></tr>
+      <tr>
+        <td>CI</td>
+        <td>true</td></tr>
+      <tr>
+        <td>EXECUTOR_NUMBER</td>
+        <td>0</td></tr>
+      <tr>
+        <td>GIT_BRANCH</td>
+        <td>origin/main</td></tr>
+      <tr>
+        <td>GIT_COMMIT</td>
+        <td>6bd168cb14d240a0605be946de7a8444974b7b22</td></tr>
+      <tr>
+        <td>GIT_URL</td>
+        <td><a href="https://github.com/rameshpatil1234/yatra-2024.git" target="_blank">https://github.com/rameshpatil1234/yatra-2024.git</a></td></tr>
+      <tr>
+        <td>JENKINS_URL</td>
+        <td><a href="http://localhost:9090/" target="_blank">http://localhost:9090/</a></td></tr>
+      <tr>
+        <td>JOB_NAME</td>
+        <td>yatra-2024</td></tr>
+      <tr>
+        <td>NODE_NAME</td>
+        <td>built-in</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "1.0.0", "pytest": "7.2.0"}</td></tr>
@@ -267,9 +303,12 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>{"Faker": "19.1.0", "allure-pytest": "2.13.2", "dependency": "0.5.1", "forked": "1.6.0", "html": "3.2.0", "ini": "0.33", "metadata": "2.0.4", "ordering": "0.6", "xdist": "3.3.1"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.11.0</td></tr></table>
+        <td>3.11.0</td></tr>
+      <tr>
+        <td>WORKSPACE</td>
+        <td>C:\Users\channabasava\.jenkins\workspace\yatra-2024</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 21.68 seconds. </p>
+    <p>1 tests ran in 19.25 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -285,9 +324,9 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">test_scripts/test_search_flights.py::TestSearchFlights::test_search_flights_1</td>
-          <td class="col-duration">20.23</td>
+          <td class="col-duration">18.33</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">self = &lt;test_scripts.test_search_flights.TestSearchFlights testMethod=test_search_flights_1&gt;, goingfrom = &#x27;Bangalore&#x27;, goingto = &#x27;Mum&#x27;<br/>date = datetime.datetime(2024, 1, 31, 0, 0), stop = &#x27;1 Stop&#x27;<br/><br/>    @data(*Utils.read_data_from_excel(&quot;data/input.xlsx&quot;, &quot;yatra-lp&quot;))<br/>    @unpack<br/>    def test_search_flights(self, goingfrom, goingto, date, stop):<br/>&gt;       search_flights_results = self.lp.enter_flight_details(goingfrom, goingto, date)<br/><br/>test_scripts\test_search_flights.py:19: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>pages\yatra_launch_page.py:75: in enter_flight_details<br/>    self.going_from(goingfrom)<br/>pages\yatra_launch_page.py:32: in going_from<br/>    self.get_going_from_field().click()<br/>pages\yatra_launch_page.py:26: in get_going_from_field<br/>    return self.wait_until_element_is_clickable(*self.going_from_field)<br/>generic\base_class.py:23: in wait_until_element_is_clickable<br/>    return wait.until(EC.element_to_be_clickable((locator_type, locator)))<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;26bee2c25aee4c018f3fed7d417c034f&quot;)&gt;<br/>method = &lt;function element_to_be_clickable.&lt;locals&gt;._predicate at 0x000001FC7F8DA2A0&gt;, message = &#x27;&#x27;<br/><br/>    def until(self, method, message: str = &quot;&quot;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value does not evaluate to ``False``.<br/>    <br/>        :param method: callable(WebDriver)<br/>        :param message: optional message for :exc:`TimeoutException`<br/>        :returns: the result of the last call to `method`<br/>        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs<br/>        &quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.monotonic() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &#x27;screen&#x27;, None)<br/>                stacktrace = getattr(exc, &#x27;stacktrace&#x27;, None)<br/>            time.sleep(self._poll)<br/>            if time.monotonic() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message: </span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       	GetHandleVerifier [0x00AF6E73+174291]</span><br/><span class="error">E       	(No symbol) [0x00A20AC1]</span><br/><span class="error">E       	(No symbol) [0x00736FF6]</span><br/><span class="error">E       	(No symbol) [0x00769876]</span><br/><span class="error">E       	(No symbol) [0x00769C2C]</span><br/><span class="error">E       	(No symbol) [0x0079BD42]</span><br/><span class="error">E       	(No symbol) [0x00787054]</span><br/><span class="error">E       	(No symbol) [0x0079A104]</span><br/><span class="error">E       	(No symbol) [0x00786DA6]</span><br/><span class="error">E       	(No symbol) [0x00761034]</span><br/><span class="error">E       	(No symbol) [0x00761F8D]</span><br/><span class="error">E       	GetHandleVerifier [0x00B949CC+820268]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00C54EBE+652494]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00C548D9+650985]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00C4962C+605244]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00C5586B+654971]</span><br/><span class="error">E       	(No symbol) [0x00A2FEBC]</span><br/><span class="error">E       	(No symbol) [0x00A28428]</span><br/><span class="error">E       	(No symbol) [0x00A2854D]</span><br/><span class="error">E       	(No symbol) [0x00A15858]</span><br/><span class="error">E       	BaseThreadInitThunk [0x7681FA29+25]</span><br/><span class="error">E       	RtlGetAppContainerNamedObjectPath [0x777D7A4E+286]</span><br/><span class="error">E       	RtlGetAppContainerNamedObjectPath [0x777D7A1E+238]</span><br/><br/>..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py:90: TimeoutException<br/> -----------------------------Captured stdout setup------------------------------ <br/>Launched chrome browser in remote system
+            <div class="log">self = &lt;test_scripts.test_search_flights.TestSearchFlights testMethod=test_search_flights_1&gt;<br/>goingfrom = &#x27;Bangalore&#x27;, goingto = &#x27;Mum&#x27;<br/>date = datetime.datetime(2024, 1, 31, 0, 0), stop = &#x27;1 Stop&#x27;<br/><br/>    @data(*Utils.read_data_from_excel(&quot;data/input.xlsx&quot;, &quot;yatra-lp&quot;))<br/>    @unpack<br/>    def test_search_flights(self, goingfrom, goingto, date, stop):<br/>&gt;       search_flights_results = self.lp.enter_flight_details(goingfrom, goingto, date)<br/><br/>test_scripts\test_search_flights.py:19: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>pages\yatra_launch_page.py:75: in enter_flight_details<br/>    self.going_from(goingfrom)<br/>pages\yatra_launch_page.py:32: in going_from<br/>    self.get_going_from_field().click()<br/>pages\yatra_launch_page.py:26: in get_going_from_field<br/>    return self.wait_until_element_is_clickable(*self.going_from_field)<br/>generic\base_class.py:23: in wait_until_element_is_clickable<br/>    return wait.until(EC.element_to_be_clickable((locator_type, locator)))<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;selenium.webdriver.support.wait.WebDriverWait (session=&quot;0de9dec2617b4ccaa5485e8a0b91a950&quot;)&gt;<br/>method = &lt;function element_to_be_clickable.&lt;locals&gt;._predicate at 0x000002152C072200&gt;<br/>message = &#x27;&#x27;<br/><br/>    def until(self, method, message: str = &quot;&quot;):<br/>        &quot;&quot;&quot;Calls the method provided with the driver as an argument until the \<br/>        return value does not evaluate to ``False``.<br/>    <br/>        :param method: callable(WebDriver)<br/>        :param message: optional message for :exc:`TimeoutException`<br/>        :returns: the result of the last call to `method`<br/>        :raises: :exc:`selenium.common.exceptions.TimeoutException` if timeout occurs<br/>        &quot;&quot;&quot;<br/>        screen = None<br/>        stacktrace = None<br/>    <br/>        end_time = time.monotonic() + self._timeout<br/>        while True:<br/>            try:<br/>                value = method(self._driver)<br/>                if value:<br/>                    return value<br/>            except self._ignored_exceptions as exc:<br/>                screen = getattr(exc, &#x27;screen&#x27;, None)<br/>                stacktrace = getattr(exc, &#x27;stacktrace&#x27;, None)<br/>            time.sleep(self._poll)<br/>            if time.monotonic() &gt; end_time:<br/>                break<br/>&gt;       raise TimeoutException(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.TimeoutException: Message: </span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       	GetHandleVerifier [0x00956E73+174291]</span><br/><span class="error">E       	(No symbol) [0x00880AC1]</span><br/><span class="error">E       	(No symbol) [0x00596FF6]</span><br/><span class="error">E       	(No symbol) [0x005C9876]</span><br/><span class="error">E       	(No symbol) [0x005C9C2C]</span><br/><span class="error">E       	(No symbol) [0x005FBD42]</span><br/><span class="error">E       	(No symbol) [0x005E7054]</span><br/><span class="error">E       	(No symbol) [0x005FA104]</span><br/><span class="error">E       	(No symbol) [0x005E6DA6]</span><br/><span class="error">E       	(No symbol) [0x005C1034]</span><br/><span class="error">E       	(No symbol) [0x005C1F8D]</span><br/><span class="error">E       	GetHandleVerifier [0x009F49CC+820268]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00AB4EBE+652494]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00AB48D9+650985]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00AA962C+605244]</span><br/><span class="error">E       	sqlite3_dbdata_init [0x00AB586B+654971]</span><br/><span class="error">E       	(No symbol) [0x0088FEBC]</span><br/><span class="error">E       	(No symbol) [0x00888428]</span><br/><span class="error">E       	(No symbol) [0x0088854D]</span><br/><span class="error">E       	(No symbol) [0x00875858]</span><br/><span class="error">E       	BaseThreadInitThunk [0x7714FA29+25]</span><br/><span class="error">E       	RtlGetAppContainerNamedObjectPath [0x77297A4E+286]</span><br/><span class="error">E       	RtlGetAppContainerNamedObjectPath [0x77297A1E+238]</span><br/><br/>..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py:90: TimeoutException<br/> -----------------------------Captured stdout setup------------------------------ <br/>Launched chrome browser in remote system
 <br/></div></td></tr></tbody></table></body></html>
